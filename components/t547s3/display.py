@@ -13,15 +13,15 @@ DEPENDENCIES = ["esp32"]
 
 CONF_GREYSCALE = "greyscale"
 
-t547_ns = cg.esphome_ns.namespace("t547")
-T547 = t547_ns.class_(
-    "T547", cg.PollingComponent, display.DisplayBuffer
+t547s3_ns = cg.esphome_ns.namespace("t547s3")
+T547S3 = t547s3_ns.class_(
+    "T547S3", cg.PollingComponent, display.DisplayBuffer
 )
 
 CONFIG_SCHEMA = cv.All(
     display.FULL_DISPLAY_SCHEMA.extend(
         {
-            cv.GenerateID(): cv.declare_id(T547),
+            cv.GenerateID(): cv.declare_id(T547S3),
             cv.Optional(CONF_GREYSCALE, default=False): cv.boolean,
             cv.Optional(CONF_INVERT, default=True): cv.boolean,
         }
