@@ -2,7 +2,7 @@
 #include "esphome/core/log.h"
 #include "esphome/core/application.h"
 #include "esphome/core/helpers.h"
-#include "logo.h"
+//#include "logo.h" //removed 8/20/2023
 
 #ifdef USE_ESP32_FRAMEWORK_ARDUINO
 

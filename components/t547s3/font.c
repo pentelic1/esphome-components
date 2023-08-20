@@ -4,7 +4,7 @@
 /******************************************************************************/
 
 #include "epd_driver.h"
-#include "zlib.h"
+#include "zlib.h" //add library in esphome
 
 #include <esp_assert.h>
 #include <esp_heap_caps.h>
