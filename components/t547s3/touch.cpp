@@ -2,7 +2,7 @@
 
 #include "touch.h"
 
-//changed all 0xD0 to 0x3AE
+//changed all 0xD0 to 0x2A
 
 bool TouchClass::begin(TwoWire &port, uint8_t addr)
 {
@@ -32,7 +32,7 @@ void TouchClass::readBytes(uint8_t *data, uint8_t nbytes)
 
 void TouchClass::clearFlags(void)
 {
-    uint8_t buf[3] = {0x3AE, 0X00, 0XAB};
+    uint8_t buf[3] = {0x2A, 0X00, 0XAB};
     _i2cPort->beginTransmission(_address);
     _i2cPort->write(buf, 3);
     _i2cPort->endTransmission();
@@ -43,7 +43,7 @@ uint8_t TouchClass::scanPoint()
     uint8_t point = 0;
     uint8_t buffer[40] = {0};
 
-    buffer[0] = 0x3AE;
+    buffer[0] = 0x2A;
     buffer[1] = 0x00;
     readBytes(buffer, 7);
 
@@ -55,7 +55,7 @@ uint8_t TouchClass::scanPoint()
     point = buffer[5] & 0xF;
 
     if (point == 1) {
-        buffer[5] = 0x3AE;
+        buffer[5] = 0x2A;
         buffer[6] = 0x07;
         readBytes( &buffer[5], 2);
 
