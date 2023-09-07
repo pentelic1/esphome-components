@@ -10,7 +10,7 @@ from .. import lilygo_t5_47_s3_ns
 CODEOWNERS = ["@jesserockz"]
 DEPENDENCIES = ["i2c"]
 
-LilygoT547Touchscreen = lilygo_t5_47_s3_ns.class_(
+LilygoT547s3Touchscreen = lilygo_t5_47_s3_ns.class_(
     "LilygoT547s3Touchscreen",
     touchscreen.Touchscreen,
     cg.Component,
