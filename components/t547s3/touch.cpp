@@ -60,7 +60,7 @@ uint8_t TouchClass::scanPoint()
         readBytes( &buffer[5], 2);
 
     } else if (point > 1) {
-        buffer[5] = 0x3AE;
+        buffer[5] = 0x2A;
         buffer[6] = 0x07;
         readBytes( &buffer[5], 5 * (point - 1) + 3);
     }
