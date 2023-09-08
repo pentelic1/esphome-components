@@ -9,7 +9,7 @@ namespace lilygo_t5_47_s3 {
 static const char *const TAG = "lilygo_t5_47_s3.touchscreen";
 
 static const uint8_t POWER_REGISTER = 0xD6;
-static const uint8_t TOUCH_REGISTER = 0x2A;  //changed from 0xD0 (13) from original
+static const uint8_t TOUCH_REGISTER = 0xD0;
 
 static const uint8_t WAKEUP_CMD[1] = {0x06};
 static const uint8_t READ_FLAGS[1] = {0x00};
